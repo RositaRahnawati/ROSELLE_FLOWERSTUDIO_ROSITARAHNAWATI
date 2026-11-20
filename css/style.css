@@ -1,0 +1,2868 @@
+/* =========================================
+   1. GLOBAL STYLE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FAF7F2;
+    color: #3E2F2F;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   2. HEADER / NAVBAR
+========================================= */
+
+.rosita_header {
+    width: 100%;
+    background-color: #FAF7F2;
+    border-bottom: 1px solid rgba(187, 94, 99, 0.12);
+    position: relative;
+    z-index: 100;
+}
+
+.rosita_container {
+    width: 92%;
+    max-width: 1450px;
+    min-height: 82px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.rosita_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3E2F2F;
+}
+
+.rosita_logo_name {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.rosita_logo_subtitle {
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+
+/* NAVIGATION */
+
+.rosita_nav_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.rosita_nav_list a {
+    font-size: 13px;
+    color: #3E2F2F;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.rosita_nav_list a:hover,
+.rosita_nav_list a.rosita_active {
+    color: #BB5E63;
+}
+
+.rosita_nav_list a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #BB5E63;
+    bottom: -6px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.rosita_nav_list a:hover::after,
+.rosita_nav_list a.rosita_active::after {
+    width: 100%;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.rosita_menu_toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #BB5E63;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.rosita_hero {
+    width: 92%;
+    max-width: 1450px;
+    min-height: 440px;
+    margin: 25px auto 0;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    background-color: #F7F0EC;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+/* HERO CONTENT */
+
+.rosita_hero_content {
+    padding: 65px 35px 60px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rosita_subtitle {
+    color: #BB5E63;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+/* HERO TITLE */
+
+.rosita_hero_title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 5vw, 75px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: #3E2F2F;
+}
+
+/* FLOWER STUDIO LEBIH KECIL */
+
+.rosita_hero_title span {
+    display: block;
+    font-size: clamp(28px, 3vw, 42px);
+    font-style: normal;
+    color: #BB5E63;
+    margin-top: 8px;
+}
+
+
+.rosita_hero_description {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* SHOP BUTTON */
+
+.rosita_button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #BB5E63;
+    color: #FFFFFF;
+
+    padding: 11px 25px;
+    border-radius: 30px;
+
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.rosita_button:hover {
+    background-color: #8B5E63;
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE PLACEHOLDER */
+
+.rosita_hero_image {
+    width: 100%;
+    height: 440px;
+    background-color: #EBDDD9;
+}
+
+
+/* =========================================
+   4. BENEFITS SECTION
+========================================= */
+
+.rosita_benefits {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    min-height: 75px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: #F5EAE8;
+    border-radius: 0 0 8px 8px;
+}
+
+.rosita_benefit_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 15px 8px;
+}
+
+.rosita_benefit_icon {
+    font-size: 27px;
+    color: #BB5E63;
+}
+
+.rosita_benefit_item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D4145;
+}
+
+.rosita_benefit_item p {
+    font-size: 11px;
+    color: #755B57;
+}
+
+
+/* =========================================
+   5. COLLECTION SECTION
+========================================= */
+
+.rosita_collection {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 75px 35px 85px;
+}
+
+
+/* COLLECTION HEADING */
+
+.rosita_collection_heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.rosita_collection_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_collection_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(29px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_collection_description {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+    margin-top: 5px;
+}
+
+
+/* PRODUCT CONTAINER */
+
+.rosita_product_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* PRODUCT CARD */
+
+.rosita_product_card {
+    background-color: #FFFFFF;
+    border: 1px solid #EBDDD9;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 18px;
+
+    box-shadow: 0 5px 15px rgba(92, 55, 55, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.rosita_product_card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, 0.12);
+}
+
+
+/* PRODUCT IMAGE PLACEHOLDER */
+
+.rosita_product_image {
+    width: 100%;
+    height: 210px;
+    background-color: #F1E5E2;
+}
+
+
+/* PRODUCT TEXT */
+
+.rosita_product_card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #6D4145;
+}
+
+.rosita_product_link {
+    display: inline-block;
+    font-size: 12px;
+    color: #BB5E63;
+    margin-top: 5px;
+    transition: 0.3s ease;
+}
+
+.rosita_product_link:hover {
+    color: #3E2F2F;
+}
+
+
+/* =========================================
+   6. FOOTER
+========================================= */
+
+.rosita_footer {
+    background-color: #3E2F2F;
+    color: #FAF7F2;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.rosita_footer_content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.rosita_footer_content p {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    color: #D8B8B9;
+    margin: 5px 0 15px;
+}
+
+.rosita_footer_content span {
+    font-size: 11px;
+    color: #E7DAD6;
+}
+
+
+/* =========================================
+   7. RESPONSIVE TABLET
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .rosita_nav_list {
+        gap: 15px;
+    }
+
+    .rosita_nav_list a {
+        font-size: 11px;
+    }
+
+    .rosita_hero_content {
+        padding-left: 30px;
+    }
+
+    .rosita_product_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rosita_product_image {
+        height: 250px;
+    }
+
+}
+
+
+/* =========================================
+   8. RESPONSIVE MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .rosita_container {
+        min-height: 70px;
+    }
+
+    .rosita_logo_name {
+        font-size: 25px;
+    }
+
+    .rosita_menu_toggle {
+        display: block;
+    }
+
+    .rosita_navbar {
+        display: none;
+    }
+
+    /* MENU TERBUKA */
+
+    .rosita_navbar.rosita_menu_open {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #FAF7F2;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(62, 47, 47, 0.1);
+    }
+
+    .rosita_navbar.rosita_menu_open .rosita_nav_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    /* HERO */
+
+    .rosita_hero {
+        grid-template-columns: 1fr;
+        margin-top: 12px;
+    }
+
+    .rosita_hero_content {
+        padding: 45px 25px;
+    }
+
+    .rosita_hero_image {
+        height: 330px;
+    }
+
+
+    /* BENEFITS */
+
+    .rosita_benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rosita_benefit_item {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+
+    /* COLLECTION */
+
+    .rosita_collection {
+        padding: 55px 15px;
+    }
+
+    .rosita_product_container {
+        gap: 12px;
+    }
+
+    .rosita_product_image {
+        height: 170px;
+    }
+
+    .rosita_product_card h3 {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   9. SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .rosita_hero_title {
+        font-size: 45px;
+    }
+
+    .rosita_hero_title span {
+        font-size: 28px;
+    }
+
+    .rosita_product_container {
+        grid-template-columns: 1fr;
+    }
+
+    .rosita_product_image {
+        height: 230px;
+    }
+
+}
+
+/* =========================================
+   10. ABOUT PAGE
+========================================= */
+
+
+/* ABOUT HERO */
+
+.rosita_about_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+}
+
+.rosita_about_heading {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+
+.rosita_about_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_about_heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_about_heading > p:last-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #755B57;
+    margin-top: 10px;
+}
+
+
+/* ABOUT BANNER */
+
+.rosita_about_banner {
+    width: 100%;
+    height: 350px;
+    background-color: #EBDDD9;
+    border-radius: 8px;
+}
+
+
+/* ABOUT STORY */
+
+.rosita_about_story {
+    width: 92%;
+    max-width: 1250px;
+    margin: 85px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.rosita_about_story_image {
+    width: 100%;
+    height: 420px;
+    background-color: #F1E5E2;
+    border-radius: 8px;
+}
+
+.rosita_about_story_content {
+    padding: 20px 0;
+}
+
+.rosita_about_label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 15px;
+}
+
+.rosita_about_story_content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: #9B5C61;
+    margin-bottom: 22px;
+}
+
+.rosita_about_story_content p:not(.rosita_about_label) {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #755B57;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* VISION AND MISSION */
+
+.rosita_about_values {
+    width: 100%;
+    background-color: #F5EAE8;
+    padding: 75px 4%;
+}
+
+.rosita_about_values_heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rosita_about_values_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_about_values_heading > p:last-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+    margin-top: 8px;
+}
+
+.rosita_about_values_container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.rosita_about_value_card {
+    background-color: #FAF7F2;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    padding: 35px 40px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.rosita_about_value_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, 0.08);
+}
+
+.rosita_about_value_card span {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #BB5E63;
+}
+
+.rosita_about_value_card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #6D4145;
+    margin: 12px 0;
+}
+
+.rosita_about_value_card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #755B57;
+    text-align: justify;
+}
+
+
+/* ABOUT CLOSING */
+
+.rosita_about_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 75px auto;
+    padding: 55px 20px;
+    text-align: center;
+    background-color: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_about_closing p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_about_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   11. ABOUT PAGE RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .rosita_about_story {
+        gap: 35px;
+    }
+
+    .rosita_about_story_image {
+        height: 370px;
+    }
+
+    .rosita_about_value_card {
+        padding: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .rosita_about_hero {
+        margin-top: 12px;
+    }
+
+    .rosita_about_heading {
+        padding: 45px 10px 30px;
+    }
+
+    .rosita_about_banner {
+        height: 260px;
+    }
+
+    .rosita_about_story {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 55px auto;
+    }
+
+    .rosita_about_story_image {
+        height: 320px;
+    }
+
+    .rosita_about_story_content {
+        padding: 0;
+    }
+
+    .rosita_about_values {
+        padding: 55px 4%;
+    }
+
+    .rosita_about_values_container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .rosita_about_value_card {
+        padding: 28px;
+    }
+
+    .rosita_about_closing {
+        margin: 55px auto;
+        padding: 45px 15px;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .rosita_about_banner {
+        height: 210px;
+    }
+
+    .rosita_about_story_image {
+        height: 260px;
+    }
+
+    .rosita_about_value_card {
+        padding: 23px;
+    }
+
+}
+
+/* =========================================
+   12. SHOP PAGE
+========================================= */
+
+
+/* SHOP HERO */
+
+.rosita_shop_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+    padding: 60px 20px 35px;
+    text-align: center;
+}
+
+.rosita_shop_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_shop_hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_shop_description {
+    max-width: 550px;
+    margin: 12px auto 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #755B57;
+}
+
+
+/* SHOP BANNER */
+
+.rosita_shop_banner {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.rosita_shop_banner_image {
+    width: 100%;
+    height: 300px;
+    background-color: #EBDDD9;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   PRODUCT SECTION
+========================================= */
+
+.rosita_shop_products {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+
+/* PRODUCT HEADING */
+
+.rosita_shop_heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rosita_shop_heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_shop_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_shop_heading span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+    margin-top: 7px;
+}
+
+
+/* PRODUCT GRID */
+
+.rosita_shop_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px 20px;
+    align-items: stretch;
+}
+
+
+/* PRODUCT CARD */
+
+.rosita_shop_card {
+    background-color: #FFFFFF;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 15px rgba(92, 55, 55, 0.05);
+
+    transition: 0.3s ease;
+}
+
+.rosita_shop_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, 0.12);
+}
+
+
+/* PRODUCT IMAGE */
+
+.rosita_shop_image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #F1E5E2;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.rosita_shop_info {
+    padding: 18px 17px 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rosita_shop_info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #6D4145;
+    margin-bottom: 8px;
+}
+
+.rosita_shop_info p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #755B57;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.rosita_shop_info a {
+    display: inline-block;
+    align-self: center;
+
+    font-size: 12px;
+    color: #BB5E63;
+
+    border-bottom: 1px solid #D8B8B9;
+    padding-bottom: 4px;
+
+    transition: 0.3s ease;
+}
+
+.rosita_shop_info a:hover {
+    color: #3E2F2F;
+    border-color: #3E2F2F;
+}
+
+
+/* =========================================
+   SHOP CLOSING
+========================================= */
+
+.rosita_shop_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px 20px;
+
+    text-align: center;
+    background-color: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_shop_closing > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_shop_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SHOP RESPONSIVE TABLET
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .rosita_shop_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .rosita_shop_banner_image {
+        height: 260px;
+    }
+
+}
+
+
+/* =========================================
+   SHOP RESPONSIVE MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .rosita_shop_hero {
+        padding: 45px 10px 30px;
+        margin-top: 12px;
+    }
+
+    .rosita_shop_banner_image {
+        height: 230px;
+    }
+
+    .rosita_shop_products {
+        padding: 55px 0 60px;
+    }
+
+    .rosita_shop_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .rosita_shop_image {
+        aspect-ratio: 3 / 4;
+    }
+
+    .rosita_shop_info {
+        padding: 14px 10px 17px;
+    }
+
+    .rosita_shop_info h3 {
+        font-size: 15px;
+    }
+
+    .rosita_shop_info p {
+        font-size: 11px;
+    }
+
+    .rosita_shop_closing {
+        margin-bottom: 55px;
+        padding: 45px 15px;
+    }
+
+}
+
+
+/* =========================================
+   SHOP SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .rosita_shop_banner_image {
+        height: 190px;
+    }
+
+    .rosita_shop_grid {
+        gap: 12px;
+    }
+
+    .rosita_shop_info {
+        padding: 12px 8px 15px;
+    }
+
+    .rosita_shop_info h3 {
+        font-size: 14px;
+    }
+
+    .rosita_shop_info p {
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================
+   13. COLLECTIONS PAGE
+========================================= */
+
+
+/* COLLECTION HERO */
+
+.rosita_collections_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+    padding: 60px 20px 35px;
+    text-align: center;
+}
+
+.rosita_collections_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_collections_hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_collections_description {
+    max-width: 570px;
+    margin: 12px auto 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #755B57;
+}
+
+
+/* COLLECTION BANNER */
+
+.rosita_collections_banner {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.rosita_collections_banner_image {
+    width: 100%;
+    height: 300px;
+    background-color: #EBDDD9;
+    border-radius: 8px;
+}
+
+
+/* COLLECTION SECTION */
+
+.rosita_collections_section {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+
+/* COLLECTION HEADING */
+
+.rosita_collections_heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.rosita_collections_heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_collections_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_collections_heading span {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+}
+
+
+/* COLLECTION GRID */
+
+.rosita_collections_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
+    align-items: stretch;
+}
+
+
+/* COLLECTION CARD */
+
+.rosita_collection_card {
+    background-color: #FFFFFF;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 15px rgba(92, 55, 55, 0.05);
+    transition: 0.3s ease;
+}
+
+.rosita_collection_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, 0.12);
+}
+
+
+/* COLLECTION IMAGE */
+
+.rosita_collection_image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #F1E5E2;
+}
+
+
+/* COLLECTION INFORMATION */
+
+.rosita_collection_info {
+    padding: 22px 20px 24px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rosita_collection_number {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 10px;
+}
+
+.rosita_collection_info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #6D4145;
+    margin-bottom: 12px;
+}
+
+.rosita_collection_info > p:not(.rosita_collection_number) {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #755B57;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.rosita_collection_info a {
+    display: inline-block;
+    align-self: center;
+
+    font-size: 12px;
+    color: #BB5E63;
+
+    border-bottom: 1px solid #D8B8B9;
+    padding-bottom: 4px;
+
+    transition: 0.3s ease;
+}
+
+.rosita_collection_info a:hover {
+    color: #3E2F2F;
+    border-color: #3E2F2F;
+}
+
+
+/* COLLECTION CLOSING */
+
+.rosita_collections_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px 20px;
+
+    text-align: center;
+    background-color: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_collections_closing > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_collections_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 25px;
+}
+
+.rosita_collections_button {
+    display: inline-block;
+    padding: 13px 27px;
+
+    background-color: #BB5E63;
+    color: #FFFFFF;
+
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+
+    transition: 0.3s ease;
+}
+
+.rosita_collections_button:hover {
+    background-color: #9B5C61;
+}
+
+
+/* =========================================
+   COLLECTIONS RESPONSIVE TABLET
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .rosita_collections_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .rosita_collections_banner_image {
+        height: 260px;
+    }
+
+}
+
+
+/* =========================================
+   COLLECTIONS RESPONSIVE MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .rosita_collections_hero {
+        padding: 45px 10px 30px;
+        margin-top: 12px;
+    }
+
+    .rosita_collections_banner_image {
+        height: 230px;
+    }
+
+    .rosita_collections_section {
+        padding: 55px 0 60px;
+    }
+
+    .rosita_collections_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .rosita_collection_info {
+        padding: 16px 12px 19px;
+    }
+
+    .rosita_collection_info h3 {
+        font-size: 17px;
+    }
+
+    .rosita_collection_info > p:not(.rosita_collection_number) {
+        font-size: 11px;
+    }
+
+    .rosita_collections_closing {
+        margin-bottom: 55px;
+        padding: 45px 15px;
+    }
+
+}
+
+
+/* =========================================
+   COLLECTIONS SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .rosita_collections_banner_image {
+        height: 190px;
+    }
+
+    .rosita_collections_grid {
+        gap: 12px;
+    }
+
+    .rosita_collection_info {
+        padding: 13px 9px 16px;
+    }
+
+    .rosita_collection_info h3 {
+        font-size: 15px;
+    }
+
+    .rosita_collection_info > p:not(.rosita_collection_number) {
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================
+   14. SERVICES PAGE
+========================================= */
+
+
+/* SERVICES HERO */
+
+.rosita_services_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+    padding: 60px 20px 35px;
+    text-align: center;
+}
+
+.rosita_services_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_services_hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_services_description {
+    max-width: 570px;
+    margin: 12px auto 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #755B57;
+}
+
+
+/* SERVICES BANNER */
+
+.rosita_services_banner {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.rosita_services_banner_image {
+    width: 100%;
+    height: 300px;
+    background-color: #EBDDD9;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   OUR SERVICES SECTION
+========================================= */
+
+.rosita_services_section {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+
+/* SERVICES HEADING */
+
+.rosita_services_heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.rosita_services_heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_services_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_services_heading span {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+}
+
+
+/* SERVICES GRID */
+
+.rosita_services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
+    align-items: stretch;
+}
+
+
+/* SERVICES CARD */
+
+.rosita_services_card {
+    background-color: #FFFFFF;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 5px 15px rgba(92, 55, 55, 0.05);
+    transition: 0.3s ease;
+}
+
+.rosita_services_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, 0.12);
+}
+
+
+/* SERVICES IMAGE */
+
+.rosita_services_image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #F1E5E2;
+}
+
+
+/* SERVICES INFORMATION */
+
+.rosita_services_info {
+    padding: 22px 20px 24px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rosita_services_info span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 10px;
+}
+
+.rosita_services_info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #6D4145;
+    margin-bottom: 12px;
+}
+
+.rosita_services_info p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #755B57;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.rosita_services_info a {
+    display: inline-block;
+    align-self: center;
+
+    font-size: 12px;
+    color: #BB5E63;
+
+    border-bottom: 1px solid #D8B8B9;
+    padding-bottom: 4px;
+
+    transition: 0.3s ease;
+}
+
+.rosita_services_info a:hover {
+    color: #3E2F2F;
+    border-color: #3E2F2F;
+}
+
+
+/* =========================================
+   SPECIAL FLORAL SERVICES
+========================================= */
+
+.rosita_services_special {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.rosita_services_special_image {
+    width: 100%;
+    height: 400px;
+    background-color: #EBDDD9;
+    border-radius: 8px;
+}
+
+.rosita_services_special_content {
+    padding: 20px 0;
+}
+
+.rosita_services_special_content > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 15px;
+}
+
+.rosita_services_special_content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: #9B5C61;
+    margin-bottom: 20px;
+}
+
+.rosita_services_special_content > span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #755B57;
+    margin-bottom: 25px;
+}
+
+
+/* SERVICES BUTTON */
+
+.rosita_services_button {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background-color: #BB5E63;
+    color: #FFFFFF;
+
+    font-size: 12px;
+    border-radius: 3px;
+
+    transition: 0.3s ease;
+}
+
+.rosita_services_button:hover {
+    background-color: #9B5C61;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SERVICES CLOSING
+========================================= */
+
+.rosita_services_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px 20px;
+
+    text-align: center;
+    background-color: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_services_closing > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_services_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SERVICES RESPONSIVE TABLET
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .rosita_services_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .rosita_services_banner_image {
+        height: 260px;
+    }
+
+    .rosita_services_special {
+        gap: 35px;
+    }
+
+    .rosita_services_special_image {
+        height: 370px;
+    }
+
+}
+
+
+/* =========================================
+   SERVICES RESPONSIVE MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .rosita_services_hero {
+        padding: 45px 10px 30px;
+        margin-top: 12px;
+    }
+
+    .rosita_services_banner_image {
+        height: 230px;
+    }
+
+    .rosita_services_section {
+        padding: 55px 0 60px;
+    }
+
+    .rosita_services_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .rosita_services_info {
+        padding: 16px 12px 19px;
+    }
+
+    .rosita_services_info h3 {
+        font-size: 17px;
+    }
+
+    .rosita_services_info p {
+        font-size: 11px;
+    }
+
+    .rosita_services_special {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 55px;
+    }
+
+    .rosita_services_special_image {
+        height: 320px;
+    }
+
+    .rosita_services_special_content {
+        padding: 0;
+    }
+
+    .rosita_services_closing {
+        margin-bottom: 55px;
+        padding: 45px 15px;
+    }
+
+}
+
+
+/* =========================================
+   SERVICES SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+    .rosita_services_banner_image {
+        height: 190px;
+    }
+
+    .rosita_services_grid {
+        gap: 12px;
+    }
+
+    .rosita_services_info {
+        padding: 13px 9px 16px;
+    }
+
+    .rosita_services_info h3 {
+        font-size: 15px;
+    }
+
+    .rosita_services_info p {
+        font-size: 10px;
+    }
+
+    .rosita_services_special_image {
+        height: 260px;
+    }
+
+}
+
+/* =========================================
+   15. TESTIMONIALS PAGE
+========================================= */
+
+.rosita_testimonials_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+    padding: 60px 20px 35px;
+    text-align: center;
+}
+
+.rosita_testimonials_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_testimonials_hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_testimonials_description {
+    max-width: 570px;
+    margin: 12px auto 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #755B57;
+}
+
+.rosita_testimonials_banner {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.rosita_testimonials_banner_image {
+    width: 100%;
+    height: 300px;
+    background: #EBDDD9;
+    border-radius: 8px;
+}
+
+.rosita_testimonials_section {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+.rosita_testimonials_heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.rosita_testimonials_heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_testimonials_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_testimonials_heading span {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+}
+
+.rosita_testimonials_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.rosita_testimonial_card {
+    background: #fff;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    padding: 28px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(92, 55, 55, .05);
+    transition: .3s ease;
+}
+
+.rosita_testimonial_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(92, 55, 55, .1);
+}
+
+.rosita_testimonial_quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: .8;
+    color: #D8B8B9;
+}
+
+.rosita_testimonial_stars {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #BB5E63;
+    margin: 14px 0;
+}
+
+.rosita_testimonial_text {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #755B57;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.rosita_testimonial_customer {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid #EBDDD9;
+    padding-top: 18px;
+}
+
+.rosita_testimonial_avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #F1E5E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9B5C61;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.rosita_testimonial_customer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6D4145;
+}
+
+.rosita_testimonial_customer span {
+    font-size: 11px;
+    color: #755B57;
+}
+
+.rosita_testimonials_appreciation {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.rosita_testimonials_appreciation_image {
+    width: 100%;
+    height: 400px;
+    background: #EBDDD9;
+    border-radius: 8px;
+}
+
+.rosita_testimonials_appreciation_content {
+    padding: 20px 0;
+}
+
+.rosita_testimonials_appreciation_content > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 15px;
+}
+
+.rosita_testimonials_appreciation_content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: #9B5C61;
+    margin-bottom: 20px;
+}
+
+.rosita_testimonials_appreciation_content > span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #755B57;
+}
+
+.rosita_testimonials_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px 20px;
+    text-align: center;
+    background: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_testimonials_closing > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_testimonials_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 25px;
+}
+
+.rosita_testimonials_button {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #BB5E63;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: .3s ease;
+}
+
+.rosita_testimonials_button:hover {
+    background: #9B5C61;
+    transform: translateY(-3px);
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .rosita_testimonials_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .rosita_testimonials_banner_image {
+        height: 260px;
+    }
+
+    .rosita_testimonials_appreciation {
+        gap: 35px;
+    }
+
+    .rosita_testimonials_appreciation_image {
+        height: 370px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .rosita_testimonials_hero {
+        padding: 45px 10px 30px;
+        margin-top: 12px;
+    }
+
+    .rosita_testimonials_banner_image {
+        height: 230px;
+    }
+
+    .rosita_testimonials_section {
+        padding: 55px 0 60px;
+    }
+
+    .rosita_testimonials_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .rosita_testimonial_card {
+        padding: 20px 16px;
+    }
+
+    .rosita_testimonial_text {
+        font-size: 12px;
+    }
+
+    .rosita_testimonials_appreciation {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 55px;
+    }
+
+    .rosita_testimonials_appreciation_image {
+        height: 320px;
+    }
+
+    .rosita_testimonials_appreciation_content {
+        padding: 0;
+    }
+
+    .rosita_testimonials_closing {
+        margin-bottom: 55px;
+        padding: 45px 15px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+    .rosita_testimonials_banner_image {
+        height: 190px;
+    }
+
+    .rosita_testimonials_grid {
+        gap: 12px;
+    }
+
+    .rosita_testimonial_card {
+        padding: 16px 12px;
+    }
+
+    .rosita_testimonial_stars {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .rosita_testimonial_text {
+        font-size: 11px;
+    }
+
+    .rosita_testimonial_customer {
+        gap: 8px;
+    }
+
+    .rosita_testimonial_avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .rosita_testimonial_customer h3 {
+        font-size: 13px;
+    }
+
+    .rosita_testimonial_customer span {
+        font-size: 10px;
+    }
+
+    .rosita_testimonials_appreciation_image {
+        height: 260px;
+    }
+}
+
+/* =========================================
+   16. CONTACT PAGE
+========================================= */
+
+.rosita_contact_hero {
+    width: 92%;
+    max-width: 1450px;
+    margin: 25px auto 0;
+    padding: 60px 20px 35px;
+    text-align: center;
+}
+
+.rosita_contact_subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_contact_hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_contact_description {
+    max-width: 620px;
+    margin: 12px auto 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #755B57;
+}
+
+.rosita_contact_banner {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.rosita_contact_banner_image {
+    width: 100%;
+    height: 300px;
+    background: #EBDDD9;
+    border-radius: 8px;
+}
+
+/* CONTACT SECTION */
+
+.rosita_contact_section {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 75px 0 85px;
+}
+
+.rosita_contact_heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.rosita_contact_heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 8px;
+}
+
+.rosita_contact_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: #9B5C61;
+}
+
+.rosita_contact_heading span {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #755B57;
+}
+
+/* CONTACT GRID */
+
+.rosita_contact_grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.rosita_contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 15px;
+}
+
+.rosita_contact_item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background: #F7F0EC;
+    border-radius: 8px;
+    transition: .3s ease;
+}
+
+.rosita_contact_item:hover {
+    transform: translateY(-4px);
+    background: #F1E5E2;
+}
+
+.rosita_contact_icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EBDDD9;
+    color: #9B5C61;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.rosita_contact_item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6D4145;
+    margin-bottom: 5px;
+}
+
+.rosita_contact_item p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #755B57;
+}
+
+/* CONTACT FORM */
+
+.rosita_contact_form_wrapper {
+    padding: 35px;
+    background: #fff;
+    border: 1px solid #EBDDD9;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(92, 55, 55, .05);
+}
+
+.rosita_contact_form_wrapper > h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #9B5C61;
+    margin-bottom: 10px;
+}
+
+.rosita_contact_form_wrapper > p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #755B57;
+    margin-bottom: 25px;
+}
+
+.rosita_contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rosita_form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rosita_form_group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6D4145;
+}
+
+.rosita_form_group input,
+.rosita_form_group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #EBDDD9;
+    border-radius: 5px;
+    background: #FAF7F2;
+    color: #3E2F2F;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: .3s ease;
+}
+
+.rosita_form_group input:focus,
+.rosita_form_group textarea:focus {
+    border-color: #BB5E63;
+    background: #fff;
+}
+
+.rosita_form_group input::placeholder,
+.rosita_form_group textarea::placeholder {
+    color: #B49B97;
+}
+
+.rosita_form_group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.rosita_contact_button {
+    align-self: flex-start;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 3px;
+    background: #BB5E63;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.rosita_contact_button:hover {
+    background: #9B5C61;
+    transform: translateY(-3px);
+}
+
+/* CLOSING SECTION */
+
+.rosita_contact_closing {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px 25px;
+    text-align: center;
+    background: #F7F0EC;
+    border-radius: 8px;
+}
+
+.rosita_contact_closing > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #BB5E63;
+    margin-bottom: 12px;
+}
+
+.rosita_contact_closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    line-height: 1.4;
+    color: #9B5C61;
+    margin-bottom: 18px;
+}
+
+.rosita_contact_closing > span {
+    display: block;
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #755B57;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+    .rosita_contact_grid {
+        gap: 30px;
+    }
+
+    .rosita_contact_form_wrapper {
+        padding: 28px;
+    }
+
+    .rosita_contact_banner_image {
+        height: 260px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .rosita_contact_hero {
+        padding: 45px 10px 30px;
+        margin-top: 12px;
+    }
+
+    .rosita_contact_banner_image {
+        height: 230px;
+    }
+
+    .rosita_contact_section {
+        padding: 55px 0 60px;
+    }
+
+    .rosita_contact_grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .rosita_contact_info {
+        gap: 15px;
+    }
+
+    .rosita_contact_item {
+        padding: 17px;
+    }
+
+    .rosita_contact_form_wrapper {
+        padding: 25px 20px;
+    }
+
+    .rosita_contact_closing {
+        margin-bottom: 55px;
+        padding: 45px 18px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+    .rosita_contact_banner_image {
+        height: 190px;
+    }
+
+    .rosita_contact_heading span {
+        font-size: 13px;
+    }
+
+    .rosita_contact_item {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .rosita_contact_icon {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+
+    .rosita_contact_form_wrapper {
+        padding: 22px 16px;
+    }
+
+    .rosita_contact_form_wrapper > h2 {
+        font-size: 24px;
+    }
+
+    .rosita_contact_button {
+        width: 100%;
+    }
+}
+
+/* WHATSAPP CONTACT LINK */
+
+.rosita_contact_link {
+    display: inline-block;
+    color: #755B57;
+    font-size: 12px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.rosita_contact_link:hover {
+    color: #BB5E63;
+    text-decoration: underline;
+}
+
+/* =========================================
+   HOME IMAGE
+========================================= */
+
+.rosita_hero_image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* SOFT IMAGE BLENDING */
+
+.rosita_hero_image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to right,
+        #F7F0EC 0%,
+        rgba(247, 240, 236, 0.75) 30%,
+        rgba(247, 240, 236, 0.25) 70%,
+        transparent 100%
+    );
+}
+
+/* IMAGE HERO DAN COLLECTION */
+
+.rosita_hero_image img,
+.rosita_product_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+    .rosita_hero_image::before {
+        display: none;
+    }
+}
+
+/* =========================================
+   ABOUT PAGE IMAGES
+========================================= */
+
+.rosita_about_banner,
+.rosita_about_story_image {
+    overflow: hidden;
+}
+
+.rosita_about_banner img,
+.rosita_about_story_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   SHOP PAGE IMAGES
+========================================= */
+
+/* SHOP BANNER IMAGE */
+
+.rosita_shop_banner_image {
+    overflow: hidden;
+}
+
+.rosita_shop_banner_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* SHOP PRODUCT IMAGES */
+
+.rosita_shop_image {
+    overflow: hidden;
+}
+
+.rosita_shop_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+/* =========================================
+   COLLECTIONS PAGE IMAGES
+========================================= */
+
+.rosita_collections_banner_image,
+.rosita_collection_image {
+    overflow: hidden;
+}
+
+.rosita_collections_banner_image img,
+.rosita_collection_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+/* =========================================
+   SERVICES PAGE IMAGES
+========================================= */
+
+.rosita_services_banner_image,
+.rosita_services_image,
+.rosita_services_special_image {
+    overflow: hidden;
+}
+
+.rosita_services_banner_image img,
+.rosita_services_image img,
+.rosita_services_special_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   TESTIMONIALS PAGE IMAGES
+========================================= */
+
+.rosita_testimonials_banner_image,
+.rosita_testimonials_appreciation_image {
+    overflow: hidden;
+}
+
+.rosita_testimonials_banner_image img,
+.rosita_testimonials_appreciation_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   CONTACT PAGE BANNER IMAGE
+========================================= */
+
+.rosita_contact_banner_image {
+    overflow: hidden;
+}
+
+.rosita_contact_banner_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================
+   CONTACT PAGE GOOGLE MAPS
+========================================= */
+
+.rosita_contact_map_section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.rosita_contact_map_heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.rosita_contact_map_heading p {
+    color: #BB5E63;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.rosita_contact_map_heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #3E2F2F;
+    margin-bottom: 12px;
+}
+
+.rosita_contact_map_heading span {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.rosita_contact_map {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #F5EDEA;
+}
+
+.rosita_contact_map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+
+/* =========================================
+   CONTACT MAP RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .rosita_contact_map_section {
+        width: 90%;
+        margin: 55px auto;
+    }
+
+    .rosita_contact_map_heading h2 {
+        font-size: 28px;
+    }
+
+    .rosita_contact_map {
+        height: 300px;
+    }
+
+}
+/* PRICE INFORMATION */
+
+.rosita_shop_price_note,
+.rosita_services_price_note {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #8A7772;
+    font-style: italic;
+    text-align: center;
+}
